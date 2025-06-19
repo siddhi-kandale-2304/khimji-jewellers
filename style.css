@@ -1,0 +1,276 @@
+/* Base Styles */
+html {
+  color-scheme: normal !important;
+  forced-color-adjust: none !important;
+}
+
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  background: #FAF9F6;
+  color: #333;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #CBB9A4;
+  padding: 0.5rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.secondary-navbar {
+  background: #F4F1EA;
+  color: #A48D78;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  padding: 6px 0;
+}
+
+.logo {
+  height: 70px;
+}
+
+.features {
+  padding: 1rem;
+  background: #E6DAC8;
+  display: flex;
+  justify-content: center;
+}
+
+.feature-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.feature {
+  background: #FFFFFF;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.feature img {
+  width: 30px;
+  height: 30px;
+}
+
+.feature p {
+  font-size: 0.7rem;
+  margin: 0;
+  color: black;
+}
+
+.feature:hover {
+  transform: scale(1.1);
+}
+
+.slider {
+  margin-top: 1rem;
+}
+
+.slides-container {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+}
+
+.slides {
+  display: flex;
+  transition: transform 3s ease-out;
+}
+
+.slides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 3s ease-out;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 0.3rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.left {
+  left: 5px;
+}
+
+.right {
+  right: 5px;
+}
+
+.footer {
+  background: #A48D78;
+  padding: 2rem 1rem;
+  color: black;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: black;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 100;
+}
+
+.footer-section ul li {
+  margin: 1rem 0;
+  color: black;
+}
+
+.footer p {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: black;
+}
+
+.footer-copy {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: black;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .secondary-navbar {
+    font-size: 1rem;
+    padding: 8px 0;
+  }
+
+  .footer-container {
+    gap: 1rem;
+  }
+
+  .feature {
+    width: 65px;
+    height: 65px;
+  }
+
+  .feature img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .feature p {
+    font-size: 0.65rem;
+  }
+  .secondary-navbar {
+    font-size: 0.95rem; 
+    padding: 2px 0;     
+  }
+}
+
+@media (max-width: 480px) {
+  .feature-grid {
+    gap: 0.7rem;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .footer p {
+    margin-top: 1.5rem;
+  }
+
+  .slides-container {
+    height: auto;
+    width: 100%;
+  }
+
+  .slides {
+    display: flex;
+    height: auto;
+    width: auto;
+  }
+
+  .slides img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+}
+
+/* Icons */
+.red-diamond-icon {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  cursor: default;
+  transition: transform 0.3s ease;
+}
+
+.red-diamond-icon:hover {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+/* Toaster Notification */
+.toaster {
+  position: fixed;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #A48D78;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  display: none;
+  z-index: 100;
+}
+
+.footer-section ul li a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #fff;
+  text-decoration: underline;
+  cursor: pointer;
+}

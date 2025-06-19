@@ -32,6 +32,67 @@ body {
   padding: 6px 0;
 }
 
+.tertiary-navbar {
+  position: relative;
+  background-color: #b22222; /* deep red */
+  color: white;
+  font-family: 'Playfair Display', serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem 1rem; /* taller height */
+  text-transform: uppercase;
+  font-size: 1rem;
+  overflow: visible;
+}
+
+.tertiary-text-left,
+.tertiary-text-right {
+  width: 35%;
+  text-align: center;
+  z-index: 1;
+}
+
+.tertiary-logo-wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -60%); /* floating effect */
+  border-radius: 50%;
+  padding: 0.3rem;
+  z-index: 2;
+}
+
+.tertiary-logo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tertiary-navbar {
+    font-size: 0.85rem;
+    padding: 2rem 0.5rem;
+  }
+
+  .tertiary-logo {
+    width: 55px;
+    height: 55px;
+  }
+
+  .tertiary-logo-wrapper {
+    transform: translate(-50%, -60%);
+  }
+
+  .tertiary-text-left,
+  .tertiary-text-right {
+    font-size: 0.75rem;
+    width: 33%;
+  }
+}
+
+
 .logo {
   height: 70px;
 }
